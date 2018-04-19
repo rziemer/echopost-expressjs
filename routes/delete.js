@@ -26,7 +26,7 @@ function DeleteSQLData(deleteData)
       
     var conn = new mysql.createConnection(config);
     conn.connect(SQLErrorHandler);
-    conn.query('DELETE FROM `rhysz-demodb`.`demo_table` WHERE `demo_key`=(?)', [deleteData], SQLErrorHandler);
+    conn.query('DELETE FROM `demo_table` WHERE `demo_key`=(?)', [deleteData], SQLErrorHandler);
     conn.end(SQLErrorHandler);
 }
 

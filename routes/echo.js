@@ -36,7 +36,7 @@ function GetSQLData(res)
 
     var conn = new mysql.createConnection(config);
     conn.connect(SQLErrorHandler);
-    conn.query('SELECT * FROM `rhysz-demodb`.`demo_table`', SQLSelectHandler);
+    conn.query('SELECT * FROM `demo_table`', SQLSelectHandler);
     conn.end(SQLErrorHandler);
 }
 

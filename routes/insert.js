@@ -26,7 +26,7 @@ function PutSQLData(insertData)
       
     var conn = new mysql.createConnection(config);
     conn.connect(SQLErrorHandler);
-    conn.query('INSERT INTO `rhysz-demodb`.`demo_table` (`demo_logitem`) VALUE (?)', [insertData], SQLErrorHandler);
+    conn.query('INSERT INTO demo_table (`demo_logitem`) VALUE (?)', [insertData], SQLErrorHandler);
     conn.end(SQLErrorHandler);
 }
 
